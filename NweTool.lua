@@ -1,59 +1,3 @@
-local _s = {}
-local function _xor(a,b) local r,p=0,1 for i=0,7 do if(math.floor(a/p)%2)~=(math.floor(b/p)%2)then r=r+p end p=p*2 end return r end
-_s[0] = (function() local d={ 107,110,98,99,98,127,104 }; local r=""; for _,b in ipairs(d) do r=r..string.char(_xor(b,42)) end; return r end)()
-_s[1] = (function() local d={ 92,27,4,27 }; local r=""; for _,b in ipairs(d) do r=r..string.char(_xor(b,42)) end; return r end)()
-_s[2] = (function() local d={ 107,110,98,99,98,127,104,117,111,121,122 }; local r=""; for _,b in ipairs(d) do r=r..string.char(_xor(b,42)) end; return r end)()
-_s[3] = (function() local d={ 108,70,83 }; local r=""; for _,b in ipairs(d) do r=r..string.char(_xor(b,42)) end; return r end)()
-_s[4] = (function() local d={ 124,67,89,95,75,70 }; local r=""; for _,b in ipairs(d) do r=r..string.char(_xor(b,42)) end; return r end)()
-_s[5] = (function() local d={ 103,67,89,73 }; local r=""; for _,b in ipairs(d) do r=r..string.char(_xor(b,42)) end; return r end)()
-_s[6] = (function() local d={ 107,110,124 }; local r=""; for _,b in ipairs(d) do r=r..string.char(_xor(b,42)) end; return r end)()
-_s[7] = (function() local d={ 103,101,124,111,103,111,100,126 }; local r=""; for _,b in ipairs(d) do r=r..string.char(_xor(b,42)) end; return r end)()
-_s[8] = (function() local d={ 108,70,83,10,121,90,79,79,78 }; local r=""; for _,b in ipairs(d) do r=r..string.char(_xor(b,42)) end; return r end)()
-_s[9] = (function() local d={ 121,122,107,105,111,10,200,170,190,10,127,90,10,10,86,10,10,123,10,200,170,190,10,110,69,93,68 }; local r=""; for _,b in ipairs(d) do r=r..string.char(_xor(b,42)) end; return r end)()
-_s[10] = (function() local d={ 120,111,100,110,111,120,99,100,109 }; local r=""; for _,b in ipairs(d) do r=r..string.char(_xor(b,42)) end; return r end)()
-_s[11] = (function() local d={ 122,102,107,115,111,120,121 }; local r=""; for _,b in ipairs(d) do r=r..string.char(_xor(b,42)) end; return r end)()
-_s[12] = (function() local d={ 111,114,126,120,107,121 }; local r=""; for _,b in ipairs(d) do r=r..string.char(_xor(b,42)) end; return r end)()
-_s[13] = (function() local d={ 125,101,120,102,110 }; local r=""; for _,b in ipairs(d) do r=r..string.char(_xor(b,42)) end; return r end)()
-_s[14] = (function() local d={ 110,99,121,122,102,107,115 }; local r=""; for _,b in ipairs(d) do r=r..string.char(_xor(b,42)) end; return r end)()
-_s[15] = (function() local d={ 121,111,120,124,111,120 }; local r=""; for _,b in ipairs(d) do r=r..string.char(_xor(b,42)) end; return r end)()
-_s[16] = (function() local d={ 122,102,107,115,111,120 }; local r=""; for _,b in ipairs(d) do r=r..string.char(_xor(b,42)) end; return r end)()
-_s[17] = (function() local d={ 108,102,115,10,121,111,126,126,99,100,109,121 }; local r=""; for _,b in ipairs(d) do r=r..string.char(_xor(b,42)) end; return r end)()
-_s[18] = (function() local d={ 99,68,76,67,68,67,94,79,10,96,95,71,90,10,2,124,3 }; local r=""; for _,b in ipairs(d) do r=r..string.char(_xor(b,42)) end; return r end)()
-_s[19] = (function() local d={ 105,70,67,73,65,10,126,122,10,2,103,69,95,89,79,3 }; local r=""; for _,b in ipairs(d) do r=r..string.char(_xor(b,42)) end; return r end)()
-_s[20] = (function() local d={ 108,95,70,70,72,88,67,77,66,94 }; local r=""; for _,b in ipairs(d) do r=r..string.char(_xor(b,42)) end; return r end)()
-_s[21] = (function() local d={ 120,79,71,69,92,79,10,108,69,77 }; local r=""; for _,b in ipairs(d) do r=r..string.char(_xor(b,42)) end; return r end)()
-_s[22] = (function() local d={ 105,88,69,89,89,66,75,67,88 }; local r=""; for _,b in ipairs(d) do r=r..string.char(_xor(b,42)) end; return r end)()
-_s[23] = (function() local d={ 111,121,122,10,2,122,70,75,83,79,88,10,100,75,71,79,89,3 }; local r=""; for _,b in ipairs(d) do r=r..string.char(_xor(b,42)) end; return r end)()
-_s[24] = (function() local d={ 109,69,78,10,103,69,78,79 }; local r=""; for _,b in ipairs(d) do r=r..string.char(_xor(b,42)) end; return r end)()
-_s[25] = (function() local d={ 99,68,92,67,89,67,72,70,79 }; local r=""; for _,b in ipairs(d) do r=r..string.char(_xor(b,42)) end; return r end)()
-_s[26] = (function() local d={ 108,70,67,68,77 }; local r=""; for _,b in ipairs(d) do r=r..string.char(_xor(b,42)) end; return r end)()
-_s[27] = (function() local d={ 120,79,75,73,66,10,2,24,26,10,89,94,95,78,89,3 }; local r=""; for _,b in ipairs(d) do r=r..string.char(_xor(b,42)) end; return r end)()
-_s[28] = (function() local d={ 121,90,67,68,10,104,69,94 }; local r=""; for _,b in ipairs(d) do r=r..string.char(_xor(b,42)) end; return r end)()
-_s[29] = (function() local d={ 107,68,94,67,7,107,108,97 }; local r=""; for _,b in ipairs(d) do r=r..string.char(_xor(b,42)) end; return r end)()
-_s[30] = (function() local d={ 107,95,94,69,10,105,69,70,70,79,73,94 }; local r=""; for _,b in ipairs(d) do r=r..string.char(_xor(b,42)) end; return r end)()
-_s[31] = (function() local d={ 104,120,99,100,109,10,107,102,102,10,126,101,101,102,121 }; local r=""; for _,b in ipairs(d) do r=r..string.char(_xor(b,42)) end; return r end)()
-_s[32] = (function() local d={ 104,126,101,101,102,121,10,2,102,69,73,75,70,3 }; local r=""; for _,b in ipairs(d) do r=r..string.char(_xor(b,42)) end; return r end)()
-_s[33] = (function() local d={ 126,111,102,111,122,101,120,126,10,126,101,10,122,102,107,115,111,120 }; local r=""; for _,b in ipairs(d) do r=r..string.char(_xor(b,42)) end; return r end)()
-_s[34] = (function() local d={ 120,111,96,101,99,100 }; local r=""; for _,b in ipairs(d) do r=r..string.char(_xor(b,42)) end; return r end)()
-_s[35] = (function() local d={ 121,111,120,124,111,120,10,98,101,122 }; local r=""; for _,b in ipairs(d) do r=r..string.char(_xor(b,42)) end; return r end)()
-_s[36] = (function() local d={ 110,111,121,126,120,101,115,10,109,127,99 }; local r=""; for _,b in ipairs(d) do r=r..string.char(_xor(b,42)) end; return r end)()
-_s[37] = (function() local d={ 120,111,121,111,126,10,121,122,111,111,110 }; local r=""; for _,b in ipairs(d) do r=r..string.char(_xor(b,42)) end; return r end)()
-_s[38] = (function() local d={ 120,111,121,111,126,10,125,101,120,102,110 }; local r=""; for _,b in ipairs(d) do r=r..string.char(_xor(b,42)) end; return r end)()
-_s[39] = (function() local d={ 122,70,75,83,79,88,10,68,75,71,79,10,94,69,10,126,122,4,4,4 }; local r=""; for _,b in ipairs(d) do r=r..string.char(_xor(b,42)) end; return r end)()
-_s[40] = (function() local d={ 66,94,94,90,89,16,5,5,77,75,71,79,89,4,88,69,72,70,69,82,4,73,69,71,5,92,27,5,77,75,71,79,89,5 }; local r=""; for _,b in ipairs(d) do r=r..string.char(_xor(b,42)) end; return r end)()
-_s[41] = (function() local d={ 5,89,79,88,92,79,88,89,5,122,95,72,70,67,73,21,89,69,88,94,101,88,78,79,88,23,107,89,73,12,70,67,71,67,94,23,27,26,26 }; local r=""; for _,b in ipairs(d) do r=r..string.char(_xor(b,42)) end; return r end)()
-_s[42] = (function() local d={ 105,101,103,104,107,126 }; local r=""; for _,b in ipairs(d) do r=r..string.char(_xor(b,42)) end; return r end)()
-_s[43] = (function() local d={ 107,67,71,72,69,94,10,2,98,69,70,78,10,120,67,77,66,94,10,105,70,67,73,65,3 }; local r=""; for _,b in ipairs(d) do r=r..string.char(_xor(b,42)) end; return r end)()
-_s[44] = (function() local d={ 98,67,94,72,69,82,10,111,82,90,75,68,78,79,88,10,2,24,26,82,3 }; local r=""; for _,b in ipairs(d) do r=r..string.char(_xor(b,42)) end; return r end)()
-_s[45] = (function() local d={ 107,99,103,104,101,126,10,121,111,126,126,99,100,109,121 }; local r=""; for _,b in ipairs(d) do r=r..string.char(_xor(b,42)) end; return r end)()
-_s[46] = (function() local d={ 108,101,124,10,120,75,78,67,95,89 }; local r=""; for _,b in ipairs(d) do r=r..string.char(_xor(b,42)) end; return r end)()
-_s[47] = (function() local d={ 121,71,69,69,94,66,68,79,89,89 }; local r=""; for _,b in ipairs(d) do r=r..string.char(_xor(b,42)) end; return r end)()
-_s[48] = (function() local d={ 98,69,70,78,10,120,99,109,98,126,10,105,102,99,105,97,10,94,69,10,75,67,71,10,75,94,10,68,79,75,88,79,89,94,10,90,70,75,83,79,88 }; local r=""; for _,b in ipairs(d) do r=r..string.char(_xor(b,42)) end; return r end)()
-_s[49] = (function() local d={ 127,126,99,102,99,126,99,111,121 }; local r=""; for _,b in ipairs(d) do r=r..string.char(_xor(b,42)) end; return r end)()
-_s[50] = (function() local d={ 108,88,79,79,10,105,75,71,10,2,121,90,83,10,105,75,71,3 }; local r=""; for _,b in ipairs(d) do r=r..string.char(_xor(b,42)) end; return r end)()
-_s[51] = (function() local d={ 107,68,94,67,7,97,67,73,65,10,5,10,107,68,94,67,7,107,78,71,67,68 }; local r=""; for _,b in ipairs(d) do r=r..string.char(_xor(b,42)) end; return r end)()
-_s[52] = (function() local d={ 108,88,79,79,10,105,75,71,16,10,125,107,121,110,10,71,69,92,79,10,86,10,123,10,78,69,93,68,10,86,10,121,90,75,73,79,10,95,90 }; local r=""; for _,b in ipairs(d) do r=r..string.char(_xor(b,42)) end; return r end)()
-
 --[[
     ADHIHUB v1.1 — Feature Hub
     Toggle GUI: Right Control
@@ -109,8 +53,8 @@ local Theme = {
 -- CLEANUP
 -- ═══════════════════════════════════════════════
 
-if game:GetService("CoreGui"):FindFirstChild(_s[0]) then
-    game:GetService("CoreGui"):FindFirstChild(_s[0]):Destroy()
+if game:GetService("CoreGui"):FindFirstChild("ADHIHUB") then
+    game:GetService("CoreGui"):FindFirstChild("ADHIHUB"):Destroy()
 end
 
 -- ═══════════════════════════════════════════════
@@ -118,7 +62,7 @@ end
 -- ═══════════════════════════════════════════════
 
 local ScreenGui = Instance.new("ScreenGui")
-ScreenGui.Name = _s[0]
+ScreenGui.Name = "ADHIHUB"
 ScreenGui.ResetOnSpawn = false
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 ScreenGui.Parent = game:GetService("CoreGui")
@@ -263,7 +207,7 @@ create("TextLabel", {
     Size = UDim2.new(0, 200, 1, 0),
     Position = UDim2.new(0, 24, 0, 0),
     BackgroundTransparency = 1,
-    Text = _s[0],
+    Text = "ADHIHUB",
     TextColor3 = Theme.Text,
     Font = Enum.Font.GothamBold,
     TextSize = 17,
@@ -275,7 +219,7 @@ create("TextLabel", {
     Size = UDim2.new(0, 40, 1, 0),
     Position = UDim2.new(0, 108, 0, 0),
     BackgroundTransparency = 1,
-    Text = _s[1],
+    Text = "v1.1",
     TextColor3 = Theme.TextDim,
     Font = Enum.Font.Gotham,
     TextSize = 11,
@@ -289,7 +233,7 @@ local MinimizedBtn = create("TextButton", {
     Position = UDim2.new(0, 12, 0, 12),
     BackgroundColor3 = Theme.BG,
     BackgroundTransparency = 0,
-    Text = _s[0],
+    Text = "ADHIHUB",
     TextColor3 = Theme.Accent,
     Font = Enum.Font.GothamBold,
     TextSize = 13,
@@ -787,36 +731,36 @@ end
 -- TAB: FLY
 -- ═══════════════════════════════════════════════
 
-local _, FlyPage = createTab(_s[3])
+local _, FlyPage = createTab("Fly")
 
-createSection(FlyPage, _s[7])
+createSection(FlyPage, "MOVEMENT")
 
-local flyToggle = createToggle(FlyPage, _s[3], false)
+local flyToggle = createToggle(FlyPage, "Fly", false)
 local noclipToggle = createToggle(FlyPage, "Noclip", false)
-local infiniteJumpToggle = createToggle(FlyPage, _s[18], false)
-local clickTPToggle = createToggle(FlyPage, _s[19], false)
+local infiniteJumpToggle = createToggle(FlyPage, "Infinite Jump (V)", false)
+local clickTPToggle = createToggle(FlyPage, "Click TP (Mouse)", false)
 
-createSection(FlyPage, _s[17])
+createSection(FlyPage, "FLY SETTINGS")
 
-local flySpeed = createSlider(FlyPage, _s[8], 1, 50, 16, nil)
+local flySpeed = createSlider(FlyPage, "Fly Speed", 1, 50, 16, nil)
 
-createLabel(FlyPage, _s[9])
+createLabel(FlyPage, "SPACE — Up  |  Q — Down")
 
 -- ═══════════════════════════════════════════════
 -- TAB: VISUAL
 -- ═══════════════════════════════════════════════
 
-local _, VisualPage = createTab(_s[4])
+local _, VisualPage = createTab("Visual")
 
-createSection(VisualPage, _s[10])
+createSection(VisualPage, "RENDERING")
 
-local fullbrightToggle = createToggle(VisualPage, _s[20], false)
-local removeFogToggle = createToggle(VisualPage, _s[21], false)
-local crosshairToggle = createToggle(VisualPage, _s[22], false)
+local fullbrightToggle = createToggle(VisualPage, "Fullbright", false)
+local removeFogToggle = createToggle(VisualPage, "Remove Fog", false)
+local crosshairToggle = createToggle(VisualPage, "Crosshair", false)
 
-createSection(VisualPage, _s[11])
+createSection(VisualPage, "PLAYERS")
 
-local espToggle = createToggle(VisualPage, _s[23], false)
+local espToggle = createToggle(VisualPage, "ESP (Player Names)", false)
 
 local crosshairH = create("Frame", {
     Size = UDim2.new(0, 2, 0, 20),
@@ -849,16 +793,16 @@ local fovCircle = create("Frame", {
 addCorner(fovCircle, 9999)
 
 local espFolder = Instance.new("Folder")
-espFolder.Name = _s[2]
+espFolder.Name = "ADHIHUB_ESP"
 espFolder.Parent = ScreenGui
 
 -- ═══════════════════════════════════════════════
 -- TAB: MISC
 -- ═══════════════════════════════════════════════
 
-local _, MiscPage = createTab(_s[5])
+local _, MiscPage = createTab("Misc")
 
-createSection(MiscPage, _s[16])
+createSection(MiscPage, "PLAYER")
 
 local speedSlider = createSlider(MiscPage, "Walk Speed", 16, 300, 16, function(val)
     local char = player.Character
@@ -874,12 +818,12 @@ local jumpSlider = createSlider(MiscPage, "Jump Power", 50, 300, 50, function(va
     end
 end)
 
-createButton(MiscPage, _s[37], Theme.Orange, function()
+createButton(MiscPage, "RESET SPEED", Theme.Orange, function()
     speedSlider.Set(16)
     jumpSlider.Set(50)
 end)
 
-createSection(MiscPage, _s[13])
+createSection(MiscPage, "WORLD")
 
 local gravitySlider = createSlider(MiscPage, "Gravity", 0, 200, 196, function(val)
     workspace.Gravity = val
@@ -889,22 +833,22 @@ local fovSlider = createSlider(MiscPage, "FOV", 30, 120, 70, function(val)
     camera.FieldOfView = val
 end)
 
-createButton(MiscPage, _s[38], Theme.Orange, function()
+createButton(MiscPage, "RESET WORLD", Theme.Orange, function()
     gravitySlider.Set(196)
     fovSlider.Set(70)
 end)
 
-createSection(MiscPage, _s[12])
+createSection(MiscPage, "EXTRAS")
 
-local godModeToggle = createToggle(MiscPage, _s[24], false)
-local invisibleToggle = createToggle(MiscPage, _s[25], false)
-local flingToggle = createToggle(MiscPage, _s[26], false)
-local reachToggle = createToggle(MiscPage, _s[27], false)
-local spinBotToggle = createToggle(MiscPage, _s[28], false)
-local antiAFKToggle = createToggle(MiscPage, _s[29], false)
-local autoCollectToggle = createToggle(MiscPage, _s[30], false)
+local godModeToggle = createToggle(MiscPage, "God Mode", false)
+local invisibleToggle = createToggle(MiscPage, "Invisible", false)
+local flingToggle = createToggle(MiscPage, "Fling", false)
+local reachToggle = createToggle(MiscPage, "Reach (20 studs)", false)
+local spinBotToggle = createToggle(MiscPage, "Spin Bot", false)
+local antiAFKToggle = createToggle(MiscPage, "Anti-AFK", false)
+local autoCollectToggle = createToggle(MiscPage, "Auto Collect", false)
 
-createButton(MiscPage, _s[31], Theme.Accent, function()
+createButton(MiscPage, "BRING ALL TOOLS", Theme.Accent, function()
     local char = player.Character
     if not char or not char:FindFirstChild("HumanoidRootPart") then return end
     for _, obj in ipairs(workspace:GetDescendants()) do
@@ -914,7 +858,7 @@ createButton(MiscPage, _s[31], Theme.Accent, function()
     end
 end)
 
-createButton(MiscPage, _s[32], Theme.Purple, function()
+createButton(MiscPage, "BTOOLS (Local)", Theme.Purple, function()
     local backpack = player:FindFirstChildOfClass("Backpack")
     if backpack then
         local hammer = Instance.new("Tool")
@@ -932,14 +876,14 @@ createButton(MiscPage, _s[32], Theme.Purple, function()
     end
 end)
 
-createSection(MiscPage, _s[15])
+createSection(MiscPage, "SERVER")
 
 local tpPlayerInput = create("TextBox", {
     Size = UDim2.new(1, 0, 0, 34),
     BackgroundColor3 = Theme.Card,
     BorderSizePixel = 0,
     Text = "",
-    PlaceholderText = _s[39],
+    PlaceholderText = "Player name to TP...",
     PlaceholderColor3 = Theme.TextMuted,
     TextColor3 = Theme.Text,
     Font = Enum.Font.Gotham,
@@ -950,7 +894,7 @@ local tpPlayerInput = create("TextBox", {
 addCorner(tpPlayerInput, 8)
 addStroke(tpPlayerInput, Theme.Border, 1, 0.5)
 
-createButton(MiscPage, _s[33], Theme.Accent, function()
+createButton(MiscPage, "TELEPORT TO PLAYER", Theme.Accent, function()
     local name = tpPlayerInput.Text
     if name == "" then return end
     for _, p in ipairs(Players:GetPlayers()) do
@@ -965,13 +909,13 @@ createButton(MiscPage, _s[33], Theme.Accent, function()
     end
 end)
 
-createButton(MiscPage, _s[34], Theme.Orange, function()
+createButton(MiscPage, "REJOIN", Theme.Orange, function()
     game:GetService("TeleportService"):Teleport(game.PlaceId, player)
 end)
 
-createButton(MiscPage, _s[35], Theme.Teal, function()
+createButton(MiscPage, "SERVER HOP", Theme.Teal, function()
     local servers = game:GetService("HttpService"):JSONDecode(
-        game:HttpGet(_s[40] .. game.PlaceId .. _s[41])
+        game:HttpGet("https://games.roblox.com/v1/games/" .. game.PlaceId .. "/servers/Public?sortOrder=Asc&limit=100")
     )
     if servers and servers.data then
         for _, s in ipairs(servers.data) do
@@ -983,9 +927,9 @@ createButton(MiscPage, _s[35], Theme.Teal, function()
     end
 end)
 
-createSection(MiscPage, _s[14])
+createSection(MiscPage, "DISPLAY")
 
-createButton(MiscPage, _s[36], Theme.Red, function()
+createButton(MiscPage, "DESTROY GUI", Theme.Red, function()
     ScreenGui:Destroy()
 end)
 
@@ -993,26 +937,26 @@ end)
 -- TAB: ADV (Advanced)
 -- ═══════════════════════════════════════════════
 
-local _, AdvPage = createTab(_s[6])
+local _, AdvPage = createTab("ADV")
 
-createSection(AdvPage, _s[42])
+createSection(AdvPage, "COMBAT")
 
-local aimbotToggle = createToggle(AdvPage, _s[43], false)
-local hitboxToggle = createToggle(AdvPage, _s[44], false)
+local aimbotToggle = createToggle(AdvPage, "Aimbot (Hold Right Click)", false)
+local hitboxToggle = createToggle(AdvPage, "Hitbox Expander (20x)", false)
 
-createSection(AdvPage, _s[45])
+createSection(AdvPage, "AIMBOT SETTINGS")
 
-local aimbotFOV = createSlider(AdvPage, _s[46], 30, 500, 120, nil)
-local aimbotSmooth = createSlider(AdvPage, _s[47], 1, 20, 5, nil)
+local aimbotFOV = createSlider(AdvPage, "FOV Radius", 30, 500, 120, nil)
+local aimbotSmooth = createSlider(AdvPage, "Smoothness", 1, 20, 5, nil)
 
-createLabel(AdvPage, _s[48])
+createLabel(AdvPage, "Hold RIGHT CLICK to aim at nearest player")
 
-createSection(AdvPage, _s[49])
+createSection(AdvPage, "UTILITIES")
 
-local freeCamToggle = createToggle(AdvPage, _s[50], false)
-local antiKickToggle = createToggle(AdvPage, _s[51], false)
+local freeCamToggle = createToggle(AdvPage, "Free Cam (Spy Cam)", false)
+local antiKickToggle = createToggle(AdvPage, "Anti-Kick / Anti-Admin", false)
 
-createLabel(AdvPage, _s[52])
+createLabel(AdvPage, "Free Cam: WASD move | Q down | Space up")
 
 -- ═══════════════════════════════════════════════
 -- FEATURE LOGIC
@@ -1155,7 +1099,7 @@ end)
 local function createESPForPlayer(target)
     if target == player then return end
     local billboard = Instance.new("BillboardGui")
-    billboard.Name = _s[2]
+    billboard.Name = "ADHIHUB_ESP"
     billboard.Size = UDim2.new(0, 100, 0, 30)
     billboard.StudsOffset = Vector3.new(0, 3, 0)
     billboard.AlwaysOnTop = true
@@ -1622,7 +1566,7 @@ end)
 -- ═══════════════════════════════════════════════
 
 for name, data in pairs(TabButtons) do
-    if name == _s[3] then
+    if name == "Fly" then
         smoothTw(data.Button, { BackgroundTransparency = 0 })
         data.Button.TextColor3 = Theme.Text
         smoothTw(data.Indicator, { BackgroundTransparency = 0 })
