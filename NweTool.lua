@@ -163,7 +163,7 @@ make("Frame", {
     BorderSizePixel = 0,
     Parent = TitleBar,
 })
-corner(make("Frame", { Size = UDim2.new(1, 0, 1, 0), Parent = TitleBar }), 3)
+corner(TitleBar, 3)
 
 make("TextLabel", {
     Size = UDim2.new(0, 180, 1, 0),
@@ -177,51 +177,7 @@ make("TextLabel", {
     Parent = TitleBar,
 })
 
-make("TextLabel", {
-    Size = UDim2.new(0, 40, 1, 0),
-    Position = UDim2.new(0, 100, 0, 0),
-    BackgroundTransparency = 1,
-    Text = "v1.2",
-    TextColor3 = C.Dim,
-    Font = Enum.Font.Gotham,
-    TextSize = 11,
-    TextXAlignment = Enum.TextXAlignment.Left,
-    Parent = TitleBar,
-})
 
--- Minimize (-)
-local minBtn = make("TextButton", {
-    Size = UDim2.new(0, 26, 0, 26),
-    Position = UDim2.new(1, -64, 0, 8),
-    BackgroundColor3 = C.Surface,
-    Text = "-",
-    TextColor3 = C.Dim,
-    Font = Enum.Font.GothamBold,
-    TextSize = 14,
-    AutoButtonColor = false,
-    Parent = TitleBar,
-})
-corner(minBtn, 7)
-minBtn.MouseEnter:Connect(function() quick(minBtn, { BackgroundColor3 = C.Accent, TextColor3 = C.Text }) end)
-minBtn.MouseLeave:Connect(function() quick(minBtn, { BackgroundColor3 = C.Surface, TextColor3 = C.Dim }) end)
-minBtn.MouseButton1Click:Connect(minimizeGUI)
-
--- Close (X)
-local closeBtn = make("TextButton", {
-    Size = UDim2.new(0, 26, 0, 26),
-    Position = UDim2.new(1, -32, 0, 8),
-    BackgroundColor3 = C.Surface,
-    Text = "X",
-    TextColor3 = C.Red,
-    Font = Enum.Font.GothamBold,
-    TextSize = 12,
-    AutoButtonColor = false,
-    Parent = TitleBar,
-})
-corner(closeBtn, 7)
-closeBtn.MouseEnter:Connect(function() quick(closeBtn, { BackgroundColor3 = C.Red, TextColor3 = C.Text }) end)
-closeBtn.MouseLeave:Connect(function() quick(closeBtn, { BackgroundColor3 = C.Surface, TextColor3 = C.Red }) end)
-closeBtn.MouseButton1Click:Connect(minimizeGUI)
 
 -- =============================================
 -- TAB BAR
