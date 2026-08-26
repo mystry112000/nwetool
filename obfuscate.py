@@ -7,12 +7,13 @@ def xor_encode(s):
     return [b ^ key for b in utf8_bytes]
 
 strings_to_hide = [
-    'NweTool',
-    'v1.0',
-    'NweTool_ESP',
+    'ADHIHUB',
+    'v1.1',
+    'ADHIHUB_ESP',
     'Fly',
     'Visual',
     'Misc',
+    'ADV',
     'MOVEMENT',
     'Fly Speed',
     'SPACE — Up  |  Q — Down',
@@ -48,6 +49,17 @@ strings_to_hide = [
     'Player name to TP...',
     'https://games.roblox.com/v1/games/',
     '/servers/Public?sortOrder=Asc&limit=100',
+    'COMBAT',
+    'Aimbot (Hold Right Click)',
+    'Hitbox Expander (20x)',
+    'AIMBOT SETTINGS',
+    'FOV Radius',
+    'Smoothness',
+    'Hold RIGHT CLICK to aim at nearest player',
+    'UTILITIES',
+    'Free Cam (Spy Cam)',
+    'Anti-Kick / Anti-Admin',
+    'Free Cam: WASD move | Q down | Space up',
 ]
 
 # Read original
@@ -83,7 +95,7 @@ decoder = '\n'.join(decoder_lines)
 
 final = decoder + '\n\n' + result
 
-with open('NweTool_OBFUSCATED.lua', 'w', encoding='utf-8') as f:
+with open('ADHIHUB_OBFUSCATED.lua', 'w', encoding='utf-8') as f:
     f.write(final)
 
 print(f"Done! {len(final.encode('utf-8'))} bytes, {len(strings_to_hide)} strings encoded")
