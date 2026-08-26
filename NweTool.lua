@@ -178,35 +178,37 @@ make("TextLabel", {
 })
 
 local minBtn = make("TextButton", {
-    Size = UDim2.new(0, 26, 0, 26),
-    Position = UDim2.new(1, -64, 0, 8),
-    BackgroundColor3 = C.Surface,
+    Size = UDim2.new(0, 28, 0, 28),
+    Position = UDim2.new(1, -66, 0, 7),
+    BackgroundColor3 = C.Card,
     Text = "-",
-    TextColor3 = C.Dim,
+    TextColor3 = C.Text,
+    Font = Enum.Font.GothamBold,
+    TextSize = 16,
+    AutoButtonColor = false,
+    Parent = TitleBar,
+})
+corner(minBtn, 8)
+stroke(minBtn, C.Border, 1, 0.3)
+minBtn.MouseEnter:Connect(function() quick(minBtn, { BackgroundColor3 = C.Accent }) end)
+minBtn.MouseLeave:Connect(function() quick(minBtn, { BackgroundColor3 = C.Card }) end)
+minBtn.MouseButton1Click:Connect(minimizeGUI)
+
+local closeBtn = make("TextButton", {
+    Size = UDim2.new(0, 28, 0, 28),
+    Position = UDim2.new(1, -32, 0, 7),
+    BackgroundColor3 = C.Card,
+    Text = "X",
+    TextColor3 = C.Red,
     Font = Enum.Font.GothamBold,
     TextSize = 14,
     AutoButtonColor = false,
     Parent = TitleBar,
 })
-corner(minBtn, 7)
-minBtn.MouseEnter:Connect(function() quick(minBtn, { BackgroundColor3 = C.Accent, TextColor3 = C.Text }) end)
-minBtn.MouseLeave:Connect(function() quick(minBtn, { BackgroundColor3 = C.Surface, TextColor3 = C.Dim }) end)
-minBtn.MouseButton1Click:Connect(minimizeGUI)
-
-local closeBtn = make("TextButton", {
-    Size = UDim2.new(0, 26, 0, 26),
-    Position = UDim2.new(1, -32, 0, 8),
-    BackgroundColor3 = C.Surface,
-    Text = "X",
-    TextColor3 = C.Red,
-    Font = Enum.Font.GothamBold,
-    TextSize = 12,
-    AutoButtonColor = false,
-    Parent = TitleBar,
-})
-corner(closeBtn, 7)
-closeBtn.MouseEnter:Connect(function() quick(closeBtn, { BackgroundColor3 = C.Red, TextColor3 = C.Text }) end)
-closeBtn.MouseLeave:Connect(function() quick(closeBtn, { BackgroundColor3 = C.Surface, TextColor3 = C.Red }) end)
+corner(closeBtn, 8)
+stroke(closeBtn, C.Border, 1, 0.3)
+closeBtn.MouseEnter:Connect(function() quick(closeBtn, { BackgroundColor3 = C.Red }) end)
+closeBtn.MouseLeave:Connect(function() quick(closeBtn, { BackgroundColor3 = C.Card }) end)
 closeBtn.MouseButton1Click:Connect(minimizeGUI)
 
 
