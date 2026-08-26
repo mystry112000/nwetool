@@ -155,7 +155,7 @@ mk("TextLabel", {
 local minBtn = mk("TextButton", {
     Size = UDim2.new(0, 30, 0, 30),
     Position = UDim2.new(1, -70, 0, 6),
-    BackgroundColor3 = C.Surface,
+    BackgroundColor3 = C.Card,
     Text = "-",
     TextColor3 = C.Text,
     Font = Enum.Font.GothamBold,
@@ -164,13 +164,13 @@ local minBtn = mk("TextButton", {
     Parent = TitleBar,
 })
 crn(minBtn, 8)
-str(minBtn, C.Border, 1, 0.3)
+str(minBtn, C.Dim, 1, 0.2)
 minBtn.MouseEnter:Connect(function()
     qtw(minBtn, {BackgroundColor3 = C.Accent})
     qtw(minBtn, {TextColor3 = C.BG})
 end)
 minBtn.MouseLeave:Connect(function()
-    qtw(minBtn, {BackgroundColor3 = C.Surface})
+    qtw(minBtn, {BackgroundColor3 = C.Card})
     qtw(minBtn, {TextColor3 = C.Text})
 end)
 minBtn.MouseButton1Click:Connect(minimizeGUI)
@@ -179,7 +179,7 @@ minBtn.MouseButton1Click:Connect(minimizeGUI)
 local closeBtn = mk("TextButton", {
     Size = UDim2.new(0, 30, 0, 30),
     Position = UDim2.new(1, -36, 0, 6),
-    BackgroundColor3 = C.Surface,
+    BackgroundColor3 = C.Card,
     Text = "X",
     TextColor3 = C.Red,
     Font = Enum.Font.GothamBold,
@@ -188,13 +188,13 @@ local closeBtn = mk("TextButton", {
     Parent = TitleBar,
 })
 crn(closeBtn, 8)
-str(closeBtn, C.Border, 1, 0.3)
+str(closeBtn, C.Dim, 1, 0.2)
 closeBtn.MouseEnter:Connect(function()
     qtw(closeBtn, {BackgroundColor3 = C.Red})
     qtw(closeBtn, {TextColor3 = C.BG})
 end)
 closeBtn.MouseLeave:Connect(function()
-    qtw(closeBtn, {BackgroundColor3 = C.Surface})
+    qtw(closeBtn, {BackgroundColor3 = C.Card})
     qtw(closeBtn, {TextColor3 = C.Red})
 end)
 closeBtn.MouseButton1Click:Connect(minimizeGUI)
