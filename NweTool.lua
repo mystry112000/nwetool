@@ -1113,7 +1113,6 @@ end)
 -- INPUT HANDLER
 -- =============================================
 UserInputService.InputBegan:Connect(function(input, gp)
-    if gp then return end
     if input.KeyCode == Enum.KeyCode.RightControl then
         if Main.Visible then minimizeGUI() else restoreGUI() end
     elseif input.KeyCode == Enum.KeyCode.E then
