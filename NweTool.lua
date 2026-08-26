@@ -169,17 +169,6 @@ addCorner(MainFrame, 14)
 addStroke(MainFrame, Theme.Border, 1, 0.3)
 addShadow(MainFrame)
 
--- Subtle accent glow at top
-local topGlow = create("Frame", {
-    Size = UDim2.new(1, 0, 0, 120),
-    Position = UDim2.new(0, 0, 0, 0),
-    BackgroundTransparency = 1,
-    BorderSizePixel = 0,
-    ClipsDescendants = true,
-    Parent = MainFrame,
-})
-addGradient(topGlow, Theme.Accent, Theme.BG, 110)
-
 -- ===============================================
 -- TITLE BAR
 -- ===============================================
