@@ -107,24 +107,27 @@ stroke(Main, C.Border, 1, 0.4)
 -- MINIMIZED BUTTON
 -- =============================================
 local MiniBtn = make("TextButton", {
-    Size = UDim2.new(0, 120, 0, 36),
-    Position = UDim2.new(0, 10, 0, 10),
+    Size = UDim2.new(0, 130, 0, 40),
+    Position = UDim2.new(0, 12, 0, 12),
     BackgroundColor3 = C.Card,
-    Text = "ADHIHUB",
+    Text = "  ADHIHUB",
     TextColor3 = C.Accent,
     Font = Enum.Font.GothamBold,
-    TextSize = 13,
+    TextSize = 14,
+    TextXAlignment = Enum.TextXAlignment.Left,
     Visible = false,
     AutoButtonColor = false,
     Parent = SG,
 })
 corner(MiniBtn, 10)
-stroke(MiniBtn, C.Accent, 1, 0.4)
+stroke(MiniBtn, C.Accent, 1, 0.3)
 MiniBtn.MouseEnter:Connect(function()
     quick(MiniBtn, { BackgroundColor3 = C.Surface })
+    quick(MiniBtn, { TextColor3 = C.Accent2 })
 end)
 MiniBtn.MouseLeave:Connect(function()
     quick(MiniBtn, { BackgroundColor3 = C.Card })
+    quick(MiniBtn, { TextColor3 = C.Accent })
 end)
 
 local function minimizeGUI()
