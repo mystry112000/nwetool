@@ -1425,7 +1425,7 @@ local function startFreeCam()
         if UserInputService:IsKeyDown(Enum.KeyCode.Space) then moveDir = moveDir + Vector3.new(0, 1, 0) end
         if UserInputService:IsKeyDown(Enum.KeyCode.Q) then moveDir = moveDir - Vector3.new(0, 1, 0) end
         if moveDir.Magnitude > 0 then
-            camera.CFrame = camera.CFrame + (moveDir.Unit * freeCamSpeed * RunService.RenderStepped:Wait())
+            camera.CFrame = camera.CFrame + (moveDir.Unit * freeCamSpeed * task.wait())
         end
     end)
 end
