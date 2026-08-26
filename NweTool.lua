@@ -1,9 +1,7 @@
---[[
-    ADHIHUB v1.1 - Feature Hub
-    Toggle GUI: Right Control
-    Fly: E | Noclip: N | InfJump: V
-    Free Cam: C | Aimbot: Hold RMB
-]]
+-- ADHIHUB v1.1 - Feature Hub
+-- Toggle GUI: Right Control
+-- Fly: E | Noclip: N | InfJump: V
+-- Free Cam: C | Aimbot: Hold RMB
 
 -- ===============================================
 -- SERVICES
