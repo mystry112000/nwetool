@@ -229,29 +229,40 @@ create("TextLabel", {
 
 -- Minimized floating button
 local MinimizedBtn = create("TextButton", {
-    Size = UDim2.new(0, 110, 0, 38),
+    Size = UDim2.new(0, 120, 0, 40),
     Position = UDim2.new(0, 12, 0, 12),
-    BackgroundColor3 = Theme.BG,
-    BackgroundTransparency = 0,
+    BackgroundColor3 = Color3.fromRGB(18, 18, 28),
+    BackgroundTransparency = 0.05,
     Text = "ADHIHUB",
-    TextColor3 = Theme.Accent,
+    TextColor3 = Theme.AccentLight,
     Font = Enum.Font.GothamBold,
-    TextSize = 13,
+    TextSize = 14,
     Visible = false,
     AutoButtonColor = false,
     Parent = ScreenGui,
 })
 addCorner(MinimizedBtn, 12)
-addStroke(MinimizedBtn, Theme.Accent, 1, 0.2)
+addStroke(MinimizedBtn, Theme.Accent, 2, 0.3)
 addShadow(MinimizedBtn)
 
+-- Mini gradient background so it's clearly dark
+local miniGrad = create("Frame", {
+    Size = UDim2.new(1, 0, 1, 0),
+    BackgroundTransparency = 0.15,
+    BackgroundColor3 = Theme.Card,
+    BorderSizePixel = 0,
+    Parent = MinimizedBtn,
+})
+addCorner(miniGrad, 12)
+addGradient(miniGrad, Theme.Card, Theme.BG, 90)
+
 MinimizedBtn.MouseEnter:Connect(function()
-    smoothTw(MinimizedBtn, { BackgroundColor3 = Theme.Surface })
-    smoothTw(MinimizedBtn, { TextColor3 = Theme.AccentLight })
+    smoothTw(MinimizedBtn, { BackgroundColor3 = Color3.fromRGB(28, 28, 42) })
+    smoothTw(MinimizedBtn, { TextColor3 = Theme.Text })
 end)
 MinimizedBtn.MouseLeave:Connect(function()
-    smoothTw(MinimizedBtn, { BackgroundColor3 = Theme.BG })
-    smoothTw(MinimizedBtn, { TextColor3 = Theme.Accent })
+    smoothTw(MinimizedBtn, { BackgroundColor3 = Color3.fromRGB(18, 18, 28) })
+    smoothTw(MinimizedBtn, { TextColor3 = Theme.AccentLight })
 end)
 
 local function minimizeGUI()
