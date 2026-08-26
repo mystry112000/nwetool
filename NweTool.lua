@@ -157,7 +157,7 @@ local MainFrame = create("Frame", {
     Name = "MainWindow",
     Size = UDim2.new(0, 440, 0, 500),
     Position = UDim2.new(0.5, -220, 0.5, -250),
-    BackgroundColor3 = Theme.BG,
+    BackgroundColor3 = Color3.fromRGB(10, 10, 16),
     BackgroundTransparency = 0,
     BorderSizePixel = 0,
     Active = true,
@@ -175,7 +175,8 @@ addShadow(MainFrame)
 
 local TitleBar = create("Frame", {
     Size = UDim2.new(1, 0, 0, 46),
-    BackgroundTransparency = 1,
+    BackgroundColor3 = Color3.fromRGB(10, 10, 16),
+    BackgroundTransparency = 0,
     BorderSizePixel = 0,
     Parent = MainFrame,
 })
@@ -882,7 +883,7 @@ local tpPlayerInput = create("TextBox", {
     BorderSizePixel = 0,
     Text = "",
     PlaceholderText = "Player name to TP...",
-    PlaceholderColor3 = Theme.TextMuted,
+    PlaceholderColor3 = Color3.fromRGB(50, 50, 70),
     TextColor3 = Theme.Text,
     Font = Enum.Font.Gotham,
     TextSize = 13,
