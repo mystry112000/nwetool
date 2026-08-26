@@ -1318,11 +1318,9 @@ aimbotToggle:SetCallback(function(enabled)
     end
 end)
 
-aimbotFOV:Set = function(v)
-    aimbotFOV._val = v
+aimbotFOV.Set = function(v)
     local diameter = v * 2
     fovCircle.Size = UDim2.new(0, diameter, 0, diameter)
-    if aimbotFOV._valLabel then aimbotFOV._valLabel.Text = tostring(v) end
 end
 
 RunService.RenderStepped:Connect(function()
